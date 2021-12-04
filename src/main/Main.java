@@ -4,17 +4,17 @@ import javax.swing.JFrame;
 
 public class Main {
   public static void main(String[] args) throws Exception {
-    JFrame gameFrame = new JFrame("Convertor Project");
+    JFrame frame = new JFrame("Convertor Project");
     Panel panel = new Panel();
     MenuBar menuBar = new MenuBar();
     
-    gameFrame.add(panel);
-    gameFrame.setJMenuBar(menuBar);
-    gameFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    gameFrame.setSize(600, 600);
-    gameFrame.setLocationRelativeTo(null);
-    gameFrame.setResizable(false);
-    gameFrame.setVisible(true);
+    frame.add(panel);
+    frame.setJMenuBar(menuBar);
+    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    frame.setSize(600, 600);
+    frame.setLocationRelativeTo(null);
+    frame.setResizable(false);
+    frame.setVisible(true);
     }
     
 }
