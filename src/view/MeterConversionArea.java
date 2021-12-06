@@ -9,4 +9,14 @@ public class MeterConversionArea extends JTextArea{
         super(str, rows, columns);
         this.setBackground(Color.orange);
     }
+
+    public void updateText(double val){
+        resetText();
+        super.append(Double.toString(val) + " m");
+        
+    }
+
+    private void resetText(){
+        super.replaceRange(null, 0, super.getText().length());
+    }
 }

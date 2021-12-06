@@ -2,12 +2,14 @@ package main;
 import view.*;
 import javax.swing.JFrame;
 
+import controller.Listerner;
+
 public class Main {
   public static void main(String[] args) throws Exception {
     JFrame frame = new JFrame("Convertor Project");
     Panel panel = new Panel();
-    MenuBar menuBar = new MenuBar();
-    
+    Listerner listener = new Listerner(panel);
+    MenuBar menuBar = new MenuBar(listener);
     frame.add(panel);
     frame.setJMenuBar(menuBar);
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

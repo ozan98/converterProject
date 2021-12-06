@@ -8,4 +8,14 @@ public class FeetConversionArea extends JTextArea{
         super(str, rows, columns);
         super.setBackground(Color.green);
     }
+    
+    public void updateText(double val){
+        resetText();
+        super.append(Double.toString(val) + " ft");
+        
+    }
+
+    private void resetText(){
+        super.replaceRange(null, 0, super.getText().length());
+    }
 }

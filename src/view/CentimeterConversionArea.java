@@ -9,5 +9,10 @@ public class CentimeterConversionArea extends JTextArea {
         super(str, rows, columns);
         super.setBackground(Color.yellow);
     }
+
+    public String areaContent(){
+        return super.getText();
+    }
+
     
 }

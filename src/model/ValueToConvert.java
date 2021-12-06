@@ -3,16 +3,18 @@ package model;
 public class ValueToConvert {
     private double val;
 
-    public ValueToConvert(String strInput){
+    public ValueToConvert(){
+    }
+
+    public Double[] convert(String strInput){
         try {
             Integer.parseInt(strInput);
         } catch (NumberFormatException e) {
             throw new IllegalArgumentException("Error: Input must be a number");
         }
         this.val = (double) Integer.parseInt(strInput);
-    }
 
-    public Double[] convert(){
+
         Double[] convertedValues = new Double[2];
         ConvertorDevice device = new ConvertorDevice();
         ConvertToFeetCommand toFeet = new ConvertToFeetCommand(device);
