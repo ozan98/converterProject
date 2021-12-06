@@ -1,37 +1,31 @@
 package model;
 
-import java.util.ArrayList;
-
 public class ValueToConvert {
-    Double[] convertedVals;
+    private double val;
 
-    public ValueToConvert(){
-        convertedVals = new Double[2];
-    }
-
-    public Double[] convert(String input){
+    public ValueToConvert(String strInput){
         try {
-           Integer.parseInt(input);
+            Integer.parseInt(strInput);
         } catch (NumberFormatException e) {
             throw new IllegalArgumentException("Error: Input must be a number");
         }
-
-        int inputVal = Integer.parseInt(input);
-        convertedVals[0] = convertToFeet(inputVal);
-        convertedVals[1] = convertToMeter(inputVal);
-
-
-        return this.convertedVals;
-
+        this.val = (double) Integer.parseInt(strInput);
     }
 
-    public double convertToFeet(int input){
-        return (double )input / 30.48;
+    public Double[] convert(){
+        Double[] convertedValues = new Double[2];
+        ConvertorDevice device = new ConvertorDevice();
+        ConvertToFeetCommand toFeet = new ConvertToFeetCommand(device);
+        ConvertToMeterCommand toMeter = new ConvertToMeterCommand(device);
+        InvokeConvertor invokeToFeet = new InvokeConvertor(toFeet);
+        InvokeConvertor invokeToMeter = new InvokeConvertor(toMeter);
+
+        convertedValues[0] = invokeToFeet.convert(val);
+        convertedValues[1] = invokeToMeter.convert(val);
+
+        return convertedValues;
     }
 
-    public double convertToMeter(int input){
-        return (double) input / 100;
-    }
 
     
 }
