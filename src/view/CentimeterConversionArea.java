@@ -1,8 +1,8 @@
 /**
  * A view class that represents a JTextarea of the centimeter area. CentimeterConversionArea is the observer of the obvserver 
- * design pattern. CentimeterConversionArea observes the concrete subject class which is Panel. Once the concrete subject has
- * made to operation of notify, CentimeterConversionArea updates its content with the provided converted value. In this class case
- * it is to update content with the converted centimeter value.
+ * design pattern. CentimeterConversionArea observes the concrete subject class which is Panel. CentimeterConversionArea does not
+ * update its state because it does not need to. The function of CentimeterConversionArea is to take input from the user and pass it
+ * to the concrete subject so it can then be past to the model to be converted. 
  */
 
 
