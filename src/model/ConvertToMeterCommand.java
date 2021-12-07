@@ -1,5 +1,8 @@
 /**
- * This is a concrete command class that executes converting input value to meter command
+ * This is a concrete command class that executes converting input value to meter command. This class implements execute by invoking
+ * the corresponding operation on the reciever. This class need a reciever before it can make an execution. That is why in the constructor
+ * it takes a reciever as a parameter. This is the reiever is will make to execution to. In the execute method, it calls the command that is 
+ * assiocated with the unit to be converted to. In this classes case that is converting to meter.
  */
 
 package model;

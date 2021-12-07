@@ -1,5 +1,8 @@
 /**
- * a view class that represent a JPanel
+ * a view class Panel that represent a JPanel. Panal is the concrete subject class of JPanal which is the subject class.
+ * Panel knows its observer which are FeetConversionArea, MeterConversionArea, and CentimeterConversionArea. Panel proposes
+ * operation to notify each observer. What the notify operation does is that it broadcasts to all the observers to update thier states.
+ * This update is displaying of the converted values.
  */
 
 package view;
@@ -16,9 +19,9 @@ public class Panel extends JPanel{
      * a constructor that initilized all the areas with defualt values and adds the areas to the panel
      */
     public Panel(){
-        feetArea = new FeetConversionArea("0 ft", 18, 20);
-        meterArea = new MeterConversionArea("0 m", 18, 20);
-        cemArea = new CentimeterConversionArea("0", 18, 20);
+        feetArea = new FeetConversionArea("0 ft", 18, 18);
+        meterArea = new MeterConversionArea("0 m", 18, 18);
+        cemArea = new CentimeterConversionArea("0", 18, 18);
         this.add(feetArea);
         this.add(meterArea);
         this.add(cemArea);

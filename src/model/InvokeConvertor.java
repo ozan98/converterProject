@@ -1,5 +1,8 @@
 /**
- * The invoker class. Commands to perfom request
+ * The invoker class of the command design pattern. This class asks the command to perform the request that is make by the client.
+ * The request is made by first recieving the command. This is done in the constructor. The construtor takes a command as a parameter
+ * and this command is to be executed. The command is executed with the convert method. This method is implemented by calling the execute method
+ * in the command class that is associated with.
  */
 
 package model;

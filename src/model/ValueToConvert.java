@@ -1,6 +1,11 @@
 /**
  * A model class that represent the application to the command design pattern
- * it encapsulates the value to be converted to feet and meter.
+ * it encapsulates the value to be converted to feet and meter. This class purpose is to encapsulate input value by the user
+ * and request to make a convert command to the reciver. Before encapsulating the input value throught the convert method, there
+ * is a precondition. The precondition is that the input value must be a number represention. This means that the string input that this
+ * class recieves from the controller must not contain any letters. If the input string contains letters, then and IllegalArgumentExeption
+ * is thrown. After the conversion is made the convert method returns an array of size 2. [0] contains the converted to feet value and [1] 
+ * contains the converted to meters value. This is sent off to the controller after it is called by it. 
  */
 
 package model;

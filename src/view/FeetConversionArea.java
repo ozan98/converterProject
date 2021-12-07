@@ -1,5 +1,8 @@
 /**
- * A view class that represents a JTextarea of the feet area
+ * A view class that represents a JTextarea of the feet area. FeetConversionArea is the observer of the obvserver 
+ * design pattern. FeetConversionArea observes the concrete subject class which is Panel. Once the concrete subject has
+ * made to operation of notify, FeetConversionArea updates its content with the provided converted value. In this class case
+ * it is to update content with the converted Feet value.
  */
 package view;
 import java.awt.Color;

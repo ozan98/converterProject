@@ -2,13 +2,13 @@ package main;
 import view.*;
 import javax.swing.JFrame;
 
-import controller.Listerner;
+import controller.Listener;
 
 public class Main {
   public static void main(String[] args) throws Exception {
     JFrame frame = new JFrame("Convertor Project");
     Panel panel = new Panel();
-    Listerner listener = new Listerner(panel);
+    Listener listener = new Listener(panel);
     MenuBar menuBar = new MenuBar(listener);
     frame.add(panel);
     frame.setJMenuBar(menuBar);

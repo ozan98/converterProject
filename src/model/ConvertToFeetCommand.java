@@ -21,7 +21,7 @@ public class ConvertToFeetCommand implements Command{
      */
     @Override
     public double execute(double val) {
-        return device.converToFeet(val);
+        return device.convertToFeet(val);
         
     }
     

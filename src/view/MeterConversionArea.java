@@ -1,5 +1,8 @@
 /**
- * A view class that represents a JTextarea of the centimeter area
+ * A view class that represents a JTextarea of the meter area. MeterConversionArea is the observer of the obvserver 
+ * design pattern. MeterConversionArea observes the concrete subject class which is Panel. Once the concrete subject has
+ * made to operation of notify, MeterConversionArea updates its content with the provided converted value. In this class case
+ * it is to update content with the converted meter value.
  */
 
 package view;

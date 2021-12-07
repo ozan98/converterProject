@@ -6,12 +6,12 @@ import view.Panel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Listerner implements ActionListener{
+public class Listener implements ActionListener{
     Panel panel;
     ValueToConvert convertor = new ValueToConvert();
 
 
-    public Listerner(Panel panel){
+    public Listener(Panel panel){
         this.panel = panel;
     }
 

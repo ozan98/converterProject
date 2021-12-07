@@ -1,5 +1,8 @@
 /**
- * a view class that represent a JMenuBar 
+ * a view class that represent a JMenuBar. The purpose of this Class is to initialize and display the menu bar of the program. It defines 
+ * a JMenu and adds it to the JMenuBar. It creates the JMenu with one menu and menu item. The menu item is created with the helper
+ * method to initialize the parameter of it. It then sets the action command and adds the action listener and aswell as the adds
+ * a keyEvent to check pressed keys.
  */
 
 package view;
